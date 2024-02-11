@@ -1,0 +1,13 @@
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\bin\Debug\net6.0\HospitalApp_Model.deps.json
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\bin\Debug\net6.0\HospitalApp_Model.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\bin\Debug\net6.0\HospitalApp_Model.pdb
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.AssemblyInfoInputs.cache
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.AssemblyInfo.cs
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.csproj.CoreCompileInputs.cache
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\refint\HospitalApp_Model.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.pdb
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\ref\HospitalApp_Model.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\bin\Debug\net6.0\HospitalApp_Model.runtimeconfig.json
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalApp_Model\obj\Debug\net6.0\HospitalApp_Model.genruntimeconfig.cache

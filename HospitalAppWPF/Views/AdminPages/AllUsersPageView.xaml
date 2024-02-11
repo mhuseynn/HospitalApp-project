@@ -1,0 +1,60 @@
+﻿<Page x:Class="HospitalAppWPF.Views.AdminPages.AllUsersPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalAppWPF.Views.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AllUsersPageView" x:Name="users_pg">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.17*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+
+            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="30" Content="Back" FontSize="15" Command="{Binding backbtn}" CommandParameter="{Binding ElementName=users_pg}"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+                <ListBox ItemsSource="{Binding Users}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Id}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding FirstName}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding LastName}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserName}" FontSize="20" VerticalAlignment="Center"/>
+                                <Button Command="{Binding DataContext.removebtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                            CommandParameter="{Binding Id}"
+                            Content="Remove" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+
+                                <Button Command="{Binding DataContext.editbtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                                 CommandParameter="{Binding Id}"
+                                 Content="Edit" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+
+        </Grid>
+
+
+        <Grid Background="White" Grid.Column="2">
+
+            <StackPanel Orientation="Vertical">
+                <TextBox Width="200" Height="30" Margin="0 50 0 0" Text="{Binding User.Id,Mode=TwoWay}"   />
+                <TextBox  Width="200" Height="30"                  Text="{Binding User.FirstName,Mode=TwoWay}"  />
+                <TextBox  Width="200" Height="30"                  Text="{Binding User.LastName,Mode=TwoWay}"  />
+                <TextBox  Width="200" Height="30"                  Text="{Binding User.UserName,Mode=TwoWay}"  />
+                <Button Width="200" Height="30" Content="Save" Command="{Binding savebtn}" CommandParameter="{Binding User.Id}"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,79 @@
+﻿<Page x:Class="HospitalAppWPF.Views.UserPages.DoctorsPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalAppWPF.Views.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DoctorsPageView">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.17*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Background="White" Grid.Column="1" >
+
+            <!--<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+                <ListBox ItemsSource="{Binding Doctors}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+              
+                                <TextBlock Text="{Binding FirstName}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding LastName}" FontSize="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="{Binding UserName}" FontSize="20" VerticalAlignment="Center"/>
+                                <Button Command="{Binding DataContext.removebtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                CommandParameter="{Binding Id}"
+                Content="Remove" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+
+                                <Button Command="{Binding DataContext.editbtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                     CommandParameter="{Binding Id}"
+                     Content="Edit" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>-->
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+                <ListBox ItemsSource="{Binding Doctors}" Grid.Column="1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="../../../StaticFiles/avatar.png" Width="100" Height="100" Margin="0 0 10 0" Grid.RowSpan="5"/>
+                                <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding FirstName}" FontSize="20" Margin="0 0 0 5"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding LastName}" FontSize="16" Margin="0 0 0 5"/>
+                                <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding UserName}" FontSize="16" Margin="0 0 0 5"/>
+                                
+                                <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+                                    <Button Command="{Binding DataContext.appobtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                                CommandParameter="{Binding Id}"
+                                Content="Appointment" Margin="0 5 0 0" />
+                                    
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+
+
+        </Grid>
+    </Grid>
+</Page>

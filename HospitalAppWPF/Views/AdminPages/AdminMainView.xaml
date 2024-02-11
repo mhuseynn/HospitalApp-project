@@ -1,0 +1,40 @@
+﻿<Page x:Class="HospitalAppWPF.Views.AdminPages.AdminMainView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalAppWPF.Views.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminMainView" x:Name="adpg">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.17*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Admin Menu" Foreground="Black" FontSize="50"/>
+            <Button Width="50" Command="{Binding test}"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" >
+                <Button HorizontalAlignment="Right" Command="{Binding see_usersbtn}" CommandParameter="{Binding ElementName=adpg}"  Height="190" Width="200" VerticalAlignment="Top" Content="All Users" />
+                <Button Height="190" Width="200" Command="{Binding see_doctorsbtn}" CommandParameter="{Binding ElementName=adpg}" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Doctors"/>
+                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="Add Doctor" Command="{Binding add_doctorbtn}" CommandParameter="{Binding ElementName=adpg}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" >
+                <Button Command="{Binding add_userbtn}" CommandParameter="{Binding ElementName=adpg}" Height="190" Width="200" VerticalAlignment="Top" Content="Add User" />
+                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Appointments"/>
+                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Analyses"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

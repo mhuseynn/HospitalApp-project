@@ -1,0 +1,21 @@
+﻿<Window x:Class="HospitalAppWPF.Views.Windows.AddAppointmentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalAppWPF.Views.Windows"
+        mc:Ignorable="d"
+        Title="AddAppointmentView" Height="450" Width="800" x:Name="appoaddwin">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <TextBox  Width="200" Text="{Binding Doctor.FirstName,Mode=TwoWay}" Height="30"/>
+            <TextBox Width="200" Height="30" Text="{Binding User.FirstName,Mode=TwoWay}"/>
+            <DatePicker SelectedDate="{Binding Appointment.Datetime,Mode=TwoWay}"/>
+
+            <Button Height="30" Content="Save" Command="{Binding savebtn}" CommandParameter="{Binding ElementName=appoaddwin}"/>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

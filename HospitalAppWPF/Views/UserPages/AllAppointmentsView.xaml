@@ -1,0 +1,51 @@
+﻿<Page x:Class="HospitalAppWPF.Views.UserPages.AllAppointmentsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalAppWPF.Views.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AllAppointmentsView">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.17*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
+                <ListBox ItemsSource="{Binding Appointments}" Grid.Column="1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="../../../StaticFiles/avatar.png" Width="100" Height="100" Margin="0 0 10 0" Grid.RowSpan="5"/>
+                                <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding DoctorName}" FontSize="20" Margin="0 0 0 5"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding UserName}" FontSize="16" Margin="0 0 0 5"/>
+                                <DatePicker Grid.Column="1" Grid.Row="2" Text="{Binding Datetime}" FontSize="16" Margin="0 0 0 5"/>
+
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+
+
+        </Grid>
+    </Grid>
+</Page>
