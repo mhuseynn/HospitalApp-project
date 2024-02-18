@@ -29,7 +29,12 @@ internal class HospitalDB : DbContext
         modelBuilder.Entity<Admin>().HasData(
         new Admin { FirstName = "Huseyn", LastName = "Mehdiyev", UserName = "huseyn", Password = "123",  Id  = 1  });
 
-       
+        modelBuilder.Entity<Doctor>().HasData(
+        new Doctor {Id=1 ,FirstName = "Huseyn", LastName = "Mehdiyev", UserName = "huseyn", Password = "123"});
+
+        modelBuilder.Entity<User>().HasData(
+        new User { Id = 1, FirstName = "Huseyn", LastName = "Mehdiyev", UserName = "huseyn", Password = "123" });
+
         base.OnModelCreating(modelBuilder);
     }
 

@@ -82,16 +82,10 @@ C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\bin\Debug\net6.0-windows\StaticFiles\setti.png
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AdminMainView.g.cs
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AdminMainView.baml
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllAdminsPageView.g.cs
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllUsersPageView.g.cs
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllAdminsPageView.baml
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllUsersPageView.baml
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AddUserPageView.g.cs
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AddUserPageView.baml
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllDoctorsPageView.g.cs
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AllDoctorsPageView.baml
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AddDoctorPageView.g.cs
-C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\AdminPages\AddDoctorPageView.baml
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\UserPages\DoctorsPageView.g.cs
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\UserPages\DoctorsPageView.baml
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\Windows\AddAppointmentView.g.cs
@@ -100,3 +94,7 @@ C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\UserPages\AllAppointmentsView.baml
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\DoctorsPages\AllAppointmentsListView.g.cs
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\obj\Debug\net6.0-windows\Views\DoctorsPages\AllAppointmentsListView.baml
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\bin\Debug\net6.0-windows\StaticFiles\R.png
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll

@@ -168,6 +168,16 @@ namespace HospitalApp_DataBase.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FirstName = "Huseyn",
+                            LastName = "Mehdiyev",
+                            Password = "123",
+                            UserName = "huseyn"
+                        });
                 });
 
             modelBuilder.Entity("HospitalApp_Model.Entities.Concretes.User", b =>
@@ -193,6 +203,16 @@ namespace HospitalApp_DataBase.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FirstName = "Huseyn",
+                            LastName = "Mehdiyev",
+                            Password = "123",
+                            UserName = "huseyn"
+                        });
                 });
 
             modelBuilder.Entity("HospitalApp_Model.Entities.Concretes.Analiz", b =>

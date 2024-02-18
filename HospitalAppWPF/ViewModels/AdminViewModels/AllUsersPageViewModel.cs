@@ -4,6 +4,7 @@ using HospitalApp_Model.Entities.Concretes;
 using HospitalAppWPF.Commands;
 using HospitalAppWPF.Services;
 using HospitalAppWPF.Views.AdminPages;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -66,21 +67,23 @@ public class AllUsersPageViewModel : NotificationService
         removebtn = new RelayCommand(remove_user!);
         User = new User();
         editbtn = new RelayCommand(edit_user!);
-        savebtn = new RelayCommand(save_changes);
-        backbtn = new RelayCommand(go_back);
+        savebtn = new RelayCommand(save_changes!);
+        backbtn = new RelayCommand(go_back!);
 
     }
 
 
     public void remove_user(object pa)
     {
-        User userremove = UserRepository.GetById((int)pa)!;
+        ListView listView = pa as ListView;
+        User userremove = UserRepository.getitem(listView.SelectedItem as User)!;
 
         if (userremove != null)
         {
             Users.Remove(userremove);
-            UserRepository.Remove((int)pa);
+            UserRepository.Remove(userremove.Id);
             UserRepository.SaveChanges();
+            Users = UserRepository.GetAll()!;
             MessageBox.Show("sss");
         }
         else
@@ -89,29 +92,21 @@ public class AllUsersPageViewModel : NotificationService
 
     public void edit_user(object pa)
     {
-        User = UserRepository.GetById((int)pa)!;
+        ListView listView = pa as ListView;
+        User = UserRepository.getitem(listView.SelectedItem as User)!;
 
     }
 
     public void save_changes(object pa)
     {
-        foreach (var item in users)
-        {
-            if (item.FirstName == User.FirstName && item.LastName == User.LastName && item.UserName == User.UserName)
-            {
-                item.FirstName = User.FirstName;
-                item.LastName = User.LastName;
-                item.UserName = User.UserName;
-            }
-
-        }
         UserRepository.Update(User);
         UserRepository.SaveChanges();
+        Users = UserRepository.GetAll()!;
         User = new User();
     }
 
 
-    public void go_back(object pa) 
+    public void go_back(object pa)
     {
         if (pa is Page page)
         {

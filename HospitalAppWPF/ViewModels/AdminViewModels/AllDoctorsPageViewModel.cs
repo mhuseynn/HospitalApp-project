@@ -23,6 +23,7 @@ public class AllDoctorsPageViewModel : NotificationService
         set { doctorRepository = value; OnPropertyChanged(); }
     }
 
+    
 
     private ICollection<Doctor> doctors;
 
@@ -66,12 +67,13 @@ public class AllDoctorsPageViewModel : NotificationService
 
     public void remove_doctor(object pa)
     {
-        Doctor doctorremove = DoctorRepository.GetById((int)pa)!;
+        ListView listView = pa as ListView;
+        Doctor doctorremove = DoctorRepository.getitem(listView.SelectedItem as Doctor);
 
         if (doctorremove != null)
         {
             Doctors.Remove(doctorremove);
-            DoctorRepository.Remove((int)pa);
+            DoctorRepository.Remove(doctorremove.Id);
             DoctorRepository.SaveChanges();
             MessageBox.Show("sss");
         }
@@ -82,24 +84,17 @@ public class AllDoctorsPageViewModel : NotificationService
     public void edit_doctor(object pa)
     {
         MessageBox.Show("sas");
-        Doctor = DoctorRepository.GetById((int)pa)!;
+        ListView listView = pa as ListView;
+        Doctor = DoctorRepository.getitem(listView.SelectedItem as Doctor);
 
     }
 
     public void save_changes(object pa)
     {
-        foreach (var item in doctors)
-        {
-            if (item.FirstName == Doctor.FirstName && item.LastName == Doctor.LastName && item.UserName == Doctor.UserName)
-            {
-                item.FirstName = Doctor.FirstName;
-                item.LastName = Doctor.LastName;
-                item.UserName = Doctor.UserName;
-            }
-
-        }
+        
         DoctorRepository.Update(Doctor);
         DoctorRepository.SaveChanges();
+        Doctors = DoctorRepository.GetAll()!;
         Doctor = new Doctor();
     }
 

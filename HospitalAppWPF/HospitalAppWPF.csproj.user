@@ -7,16 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AdminPages\AddDoctorPageView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\AdminPages\AddUserPageView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\AdminPages\AdminMainView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\AdminPages\AllAdminsPageView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AdminPages\AllDoctorsPageView.xaml.cs">
@@ -60,16 +51,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\AdminPages\AddDoctorPageView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\AdminPages\AddUserPageView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\AdminPages\AdminMainView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\AdminPages\AllAdminsPageView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AdminPages\AllDoctorsPageView.xaml">

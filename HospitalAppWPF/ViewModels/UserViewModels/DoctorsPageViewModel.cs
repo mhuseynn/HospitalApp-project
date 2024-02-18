@@ -14,7 +14,7 @@ namespace HospitalAppWPF.ViewModels.UserViewModels;
 
 public class DoctorsPageViewModel : NotificationService
 {
-    
+
     private DoctorRepository doctorRepository;
 
     public DoctorRepository DoctorRepository
@@ -48,29 +48,35 @@ public class DoctorsPageViewModel : NotificationService
         set { doctor = value; OnPropertyChanged(); }
     }
 
-    public ICommand appobtn {  get; set; }
-    
+    public ICommand appobtn { get; set; }
+    public ICommand backbtn { get; set; }
+
     public DoctorsPageViewModel(User user)
     {
-        User= user;
-        Doctor= new Doctor();
+        User = user;
+        Doctor = new Doctor();
         DoctorRepository = new DoctorRepository();
-        Doctors=new ObservableCollection<Doctor>();
+        Doctors = new ObservableCollection<Doctor>();
         Doctors = DoctorRepository.GetAll()!;
         appobtn = new RelayCommand(go_add_appo!);
+        backbtn = new RelayCommand(go_back!);
     }
 
     public void go_add_appo(object pa)
     {
         Doctor = (Doctor)(DoctorRepository.GetById((int)pa))!;
-        Window window = new AddAppointmentView(User,Doctor);
+        Window window = new AddAppointmentView(User, Doctor);
         window.ShowDialog();
     }
 
-
-
-
-
+    public void go_back(object pa)
+    {
+        Window? window = pa as Window;
+        if (window != null)
+        {
+            window.Close();
+        }
+    }
 
 
 }

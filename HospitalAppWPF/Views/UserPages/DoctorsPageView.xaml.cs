@@ -18,7 +18,7 @@ namespace HospitalAppWPF.Views.UserPages
     /// <summary>
     /// Interaction logic for DoctorsPageView.xaml
     /// </summary>
-    public partial class DoctorsPageView : Page
+    public partial class DoctorsPageView : Window
     {
         public DoctorsPageView()
         {

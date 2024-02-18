@@ -9,6 +9,8 @@ public interface IGenericRepository<T> where T : BaseEntity, new()
     void Remove(T entity);
     void Remove(int id);
     T? GetById(int id);
+
+    T? getitem(T entitys);
     ICollection<T>? GetAll();
     void SaveChanges();
 }

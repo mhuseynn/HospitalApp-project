@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("staticfiles/avatar.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("staticfiles/r.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("staticfiles/setti.png")]
 
 

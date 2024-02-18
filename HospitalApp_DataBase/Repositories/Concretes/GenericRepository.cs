@@ -31,6 +31,13 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, 
         return entity;
     }
 
+    public T? getitem(T entitys)
+    {
+        if (entitys.Id <= 0) throw new Exception("Id is not valid");
+        var entity = _context?.Set<T>().FirstOrDefault(x => x.Id == entitys.Id);
+        return entity;
+    }
+
     public void Remove(T entity)
     {
         if (entity is null) throw new Exception("entity is NUll");

@@ -18,7 +18,7 @@ namespace HospitalAppWPF.Views.DoctorsPages
     /// <summary>
     /// Interaction logic for AllAppointmentsListView.xaml
     /// </summary>
-    public partial class AllAppointmentsListView : Page
+    public partial class AllAppointmentsListView : Window
     {
         public AllAppointmentsListView()
         {

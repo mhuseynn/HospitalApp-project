@@ -3,6 +3,7 @@ using HospitalAppWPF.Commands;
 using HospitalAppWPF.Services;
 using HospitalAppWPF.ViewModels.DoctorViewModels;
 using HospitalAppWPF.Views.DoctorsPages;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -31,9 +32,9 @@ class MotherWindowDoctorViewModel :NotificationService
 	{ 
 		if (pa is Frame frame)
 		{
-			Page page = new AllAppointmentsListView();
+			Window page = new AllAppointmentsListView();
 			page.DataContext = new AllAppointmentsListViewModel(Doctor);
-			frame.NavigationService.Navigate(page);
+			page.ShowDialog();
 		}
 	}
 

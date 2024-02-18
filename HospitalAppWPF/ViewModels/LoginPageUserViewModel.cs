@@ -2,6 +2,8 @@
 using HospitalApp_Model.Entities.Concretes;
 using HospitalAppWPF.Commands;
 using HospitalAppWPF.Services;
+using HospitalAppWPF.ViewModels.UserViewModels;
+using HospitalAppWPF.Views.UserPages;
 using HospitalAppWPF.Views.Windows;
 using System.Windows;
 using System.Windows.Controls;

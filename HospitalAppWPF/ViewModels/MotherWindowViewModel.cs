@@ -11,6 +11,8 @@ namespace HospitalAppWPF.ViewModels;
 
 class MotherWindowViewModel : NotificationService
 {
+
+
     private User user;
 
     public User User
@@ -27,28 +29,24 @@ class MotherWindowViewModel : NotificationService
     {
         User = user;
         doctorsbtn = new RelayCommand(go_doctors!);
-        appolistbtn = new RelayCommand(go_appo_list);
+        appolistbtn = new RelayCommand(go_appo_list!);
     }
 
-   
+
     public void go_doctors(object pa)
     {
-        if (pa is Frame fr)
-        {
-            var newp = new DoctorsPageView();
-            newp.DataContext = new DoctorsPageViewModel(User);
-            fr.NavigationService.Navigate(newp);
-        }
+        var newp = new DoctorsPageView();
+        newp.DataContext = new DoctorsPageViewModel(User);
+        newp.ShowDialog();
     }
 
 
     public void go_appo_list(object pa)
     {
-        if (pa is Frame fr)
-        {
-            var newp = new AllAppointmentsView();
-            newp.DataContext = new AllAppointmentsViewModel(User);
-            fr.NavigationService.Navigate(newp);
-        }
+        var newp = new AllAppointmentsView();
+        newp.DataContext = new AllAppointmentsViewModel(User);
+        newp.ShowDialog();
     }
+
+
 }

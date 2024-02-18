@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Huseyn\source\repos\HospitalApp\HospitalAppWPF\App.xaml
-171977098236
-2-1922074268
-37-594829441
-2241478350992
-Views\AdminPages\AddDoctorPageView.xaml;Views\AdminPages\AddUserPageView.xaml;Views\AdminPages\AdminMainView.xaml;Views\AdminPages\AllAdminsPageView.xaml;Views\AdminPages\AllDoctorsPageView.xaml;Views\AdminPages\AllUsersPageView.xaml;Views\DoctorsPages\AllAppointmentsListView.xaml;Views\Pages\LoginPageView.xaml;Views\Pages\LoginPageViewUser.xaml;Views\Pages\SignUpPageView.xaml;Views\UserPages\AllAppointmentsView.xaml;Views\UserPages\DoctorsPageView.xaml;Views\Windows\AddAppointmentView.xaml;Views\Windows\MainWindowView.xaml;Views\Windows\MotherWindowAdminView.xaml;Views\Windows\MotherWindowDoctorView.xaml;Views\Windows\MotherWindowView.xaml;
+14-345331879
+3-1122461778
+32-1494897642
+227-2014905686
+Views\AdminPages\AdminMainView.xaml;Views\AdminPages\AllDoctorsPageView.xaml;Views\AdminPages\AllUsersPageView.xaml;Views\DoctorsPages\AllAppointmentsListView.xaml;Views\Pages\LoginPageView.xaml;Views\Pages\LoginPageViewUser.xaml;Views\Pages\SignUpPageView.xaml;Views\UserPages\AllAppointmentsView.xaml;Views\UserPages\DoctorsPageView.xaml;Views\Windows\AddAppointmentView.xaml;Views\Windows\MainWindowView.xaml;Views\Windows\MotherWindowAdminView.xaml;Views\Windows\MotherWindowDoctorView.xaml;Views\Windows\MotherWindowView.xaml;
 
 False
 

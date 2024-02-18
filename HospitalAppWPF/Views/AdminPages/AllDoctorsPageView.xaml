@@ -10,49 +10,70 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.17*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
 
             <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="30" Content="Back" FontSize="15" Command="{Binding backbtn}" CommandParameter="{Binding ElementName=doctors_pg}"/>
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 40 0 0">
-                <ListBox ItemsSource="{Binding Doctors}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Id}" FontSize="20" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding FirstName}" FontSize="20" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding LastName}" FontSize="20" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding UserName}" FontSize="20" VerticalAlignment="Center"/>
-                                
-                                <Button Command="{Binding DataContext.removebtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
-                     CommandParameter="{Binding Id}"
-                     Content="Remove" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <ListView x:Name="myList"  ItemsSource="{Binding Doctors}" SelectionMode="Single">
+                    <ListView.View>
 
+                        <GridView>
+                            <GridViewColumn Width="50"  Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                            <GridViewColumn Width="100" Header="FirstName" DisplayMemberBinding="{Binding FirstName}" />
+                            <GridViewColumn Width="100" Header="LastName" DisplayMemberBinding="{Binding LastName}" />
+                            <GridViewColumn Width="100" Header="Username" DisplayMemberBinding="{Binding UserName}"/>
+                            <GridViewColumn Width="100" Header="Password" DisplayMemberBinding="{Binding Password}"/>
+                            <GridViewColumn Width="100" Header="Department Id" DisplayMemberBinding="{Binding DepartmentId}"/>
+                        </GridView>
+                    </ListView.View>
 
-                                <Button Command="{Binding DataContext.editbtn, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
-                          CommandParameter="{Binding Id}"
-                          Content="Edit" Width="50" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                </ListView>
             </ScrollViewer>
 
+            <StackPanel  Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button  Command="{Binding removebtn}"
+                     CommandParameter="{Binding ElementName=myList}"
+                     Content="Remove" Width="100" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                <Button  Command="{Binding editbtn}"
+                          CommandParameter="{Binding ElementName=myList}"
+                      Margin="10 0 0 0"    Content="Edit" Width="100" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </StackPanel>
         </Grid>
 
 
-        <Grid Background="White" Grid.Column="2">
+        <Grid Background="White" Grid.Column="1">
+            <TextBlock Text="Add or Edit Doctor" FontSize="30" Margin="0 30 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <TextBlock Text="Id" />
+                <TextBox IsEnabled="False" Width="200" Height="30" Text="{Binding Doctor.Id,Mode=TwoWay}"   />
 
-            <StackPanel Orientation="Vertical">
-                <TextBox Width="200" Height="30" Margin="0 50 0 0" Text="{Binding Doctor.Id,Mode=TwoWay}"   />
-                <TextBox  Width="200" Height="30"                  Text="{Binding Doctor.FirstName,Mode=TwoWay}"  />
-                <TextBox  Width="200" Height="30"                  Text="{Binding Doctor.LastName,Mode=TwoWay}"  />
-                <TextBox  Width="200" Height="30"                  Text="{Binding Doctor.UserName,Mode=TwoWay}"  />
-                <Button Width="200" Height="30" Content="Save" Command="{Binding savebtn}" CommandParameter="{Binding User.Id}"/>
+                <TextBlock Text="First Name" />
+                <TextBox  Width="200" Height="30" Text="{Binding Doctor.FirstName,Mode=TwoWay}"  />
+
+                <TextBlock Text="Last Name" />
+                <TextBox  Width="200" Height="30" Text="{Binding Doctor.LastName,Mode=TwoWay}"  />
+
+                <TextBlock Text="Username" />
+                <TextBox  Width="200" Height="30" Text="{Binding Doctor.UserName,Mode=TwoWay}"  />
+                
+                <TextBlock Text="Password" />
+                <TextBox  Width="200" Height="30" Text="{Binding Doctor.Password,Mode=TwoWay}"  />
+                
+                <TextBlock Text="Department Id" />
+                <TextBox  Width="200" Height="30" Text="{Binding Doctor.DepartmentId,Mode=TwoWay}"  />
+
+                <Button Width="200" Height="30" Content="Save" Command="{Binding savebtn}" CommandParameter="{Binding Doctor.Id}"/>
             </StackPanel>
 
         </Grid>

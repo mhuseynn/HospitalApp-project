@@ -4,17 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HospitalAppWPF.Views.AdminPages"
+      xmlns:matdes="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AdminMainView" x:Name="adpg">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.17*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1">
+
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition Height="0.5*"/>
@@ -22,18 +20,13 @@
             </Grid.RowDefinitions>
 
 
-            <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Admin Menu" Foreground="Black" FontSize="50"/>
-            <Button Width="50" Command="{Binding test}"/>
-            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" >
-                <Button HorizontalAlignment="Right" Command="{Binding see_usersbtn}" CommandParameter="{Binding ElementName=adpg}"  Height="190" Width="200" VerticalAlignment="Top" Content="All Users" />
-                <Button Height="190" Width="200" Command="{Binding see_doctorsbtn}" CommandParameter="{Binding ElementName=adpg}" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Doctors"/>
-                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="Add Doctor" Command="{Binding add_doctorbtn}" CommandParameter="{Binding ElementName=adpg}"/>
-            </StackPanel>
+            <TextBlock Margin="10 0 0 0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Admin Menu" Foreground="Black" FontSize="50"/>
 
-            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" >
-                <Button Command="{Binding add_userbtn}" CommandParameter="{Binding ElementName=adpg}" Height="190" Width="200" VerticalAlignment="Top" Content="Add User" />
-                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Appointments"/>
-                <Button Height="190" Width="200" VerticalAlignment="Top" Margin="30 0 0 0" Content="All Analyses"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal"  Grid.Row="1" >
+                <Button HorizontalAlignment="Right" Command="{Binding see_usersbtn}" CommandParameter="{Binding ElementName=adpg}"  Height="150" Width="150" VerticalAlignment="Center" Content="Users" />
+                <Button Height="150" Width="150" Command="{Binding see_doctorsbtn}" CommandParameter="{Binding ElementName=adpg}" VerticalAlignment="Center" Margin="10 0 15 0" Content="Doctors"/>
+                <Button Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 10 0" Content="Appointments"/>
+                <Button Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 0 0 0" Content="Analyses"/>
             </StackPanel>
         </Grid>
     </Grid>

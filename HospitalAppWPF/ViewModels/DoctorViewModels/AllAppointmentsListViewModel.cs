@@ -8,6 +8,7 @@ using System.Numerics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Navigation;
 
 namespace HospitalAppWPF.ViewModels.DoctorViewModels
 {
@@ -30,7 +31,7 @@ namespace HospitalAppWPF.ViewModels.DoctorViewModels
         }
 
 
-
+        public ICommand close_command { get; set; }
         private ICollection<Appointment> appointments_confirmed;
 
         public ICollection<Appointment> Appointments_confirmed
@@ -62,7 +63,18 @@ namespace HospitalAppWPF.ViewModels.DoctorViewModels
             confirmbtn = new RelayCommand(confirm_appo!);
             Doctor = doctor;
             backbtn = new RelayCommand(go_back!);
+            close_command = new RelayCommand(close!);
 
+        }
+
+        public void close(object pa)
+        {
+
+            Window? window = pa as Window;
+            if (window != null)
+            {
+                window.Close();
+            }
         }
 
         public void go_back(object pa) 
