@@ -68,22 +68,23 @@ public class AllDoctorsPageViewModel : NotificationService
     public void remove_doctor(object pa)
     {
         ListView listView = pa as ListView;
-        Doctor doctorremove = DoctorRepository.getitem(listView.SelectedItem as Doctor);
+        Doctor doctorremove = DoctorRepository.getitem(listView.SelectedItem as Doctor)!;
 
         if (doctorremove != null)
         {
             Doctors.Remove(doctorremove);
             DoctorRepository.Remove(doctorremove.Id);
             DoctorRepository.SaveChanges();
-            MessageBox.Show("sss");
+            Doctors = DoctorRepository.GetAll()!;
+            MessageBox.Show("silindi");
         }
         else
-            MessageBox.Show("nulld");
+            MessageBox.Show("nulldur");
     }
 
     public void edit_doctor(object pa)
     {
-        MessageBox.Show("sas");
+        MessageBox.Show("edit");
         ListView listView = pa as ListView;
         Doctor = DoctorRepository.getitem(listView.SelectedItem as Doctor);
 

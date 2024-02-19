@@ -8,8 +8,8 @@ public class DoctorRepository : GenericRepository<Doctor> , IDoctorRepository
     public Doctor getForlogin(string username, string password)
     {
 
-        var doctor = _context?.Doctors.FirstOrDefault(x => x.UserName == username && x.Password == password);
-        return doctor;
+        var doctor = _context?.Doctors!.FirstOrDefault(x => x.UserName == username && x.Password == password);
+        return doctor!;
 
     }
 }

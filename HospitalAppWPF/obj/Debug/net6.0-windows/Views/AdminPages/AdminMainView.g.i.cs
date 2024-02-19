@@ -64,7 +64,7 @@ namespace HospitalAppWPF.Views.AdminPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HospitalAppWPF;V1.0.0.0;component/views/adminpages/adminmainview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HospitalAppWPF;component/views/adminpages/adminmainview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\AdminPages\AdminMainView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
